@@ -1,5 +1,5 @@
 {
-  "name": "@cscmobi/fcm-nestjs",
+  "name": "cscmobi-fcm-nestjs",
   "version": "0.4.0",
   "description": "NestJS npm package starter",
   "author": "Tuyen Nguyen <tuyennv@cscmobi.com>",

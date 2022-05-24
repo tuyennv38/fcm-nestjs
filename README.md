@@ -14,12 +14,10 @@
   </a>
 </div>
 
-_This project forked from [CostianuRazvan/nestjs-fcm](https://github.com/CostianuRazvan/nestjs-fcm)_
-
 ### Installation
 
 ```bash
-npm install --save @doracoder/fcm-nestjs
+npm install --save cscmobi-fcm-nestjs
 ```
 
 ### FcmModule
@@ -28,13 +26,17 @@ To user FcmService you must add the module first. **The `FcmModule` has a `@Glob
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { FcmModule } from '@csc/fcm-nestjs';
+import { FcmModule } from 'cscmobi-fcm-nestjs';
 import * as path from 'path';
 
 @Module({
   imports: [
     FcmModule.forRoot({
-      firebaseSpecsPath: path.join(__dirname, '../firebase.spec.json'),
+        serviceAccount: {
+            projectId: '----YOUR PROJECTID----',
+            clientEmail: '---YOUR CLIENT EMAIL---',
+            privateKey: '---YOUR PRIVATEKEY----'
+        }
     }),
   ],
   controllers: [],
