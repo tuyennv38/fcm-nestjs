@@ -1,8 +1,8 @@
 {
-  "name": "@csc/fcm-nestjs",
+  "name": "@cscmobi/fcm-nestjs",
   "version": "0.4.0",
   "description": "NestJS npm package starter",
-  "author": "Tuyen Nguyen <tuyennv11290@gmail.com>",
+  "author": "Tuyen Nguyen <tuyennv@cscmobi.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -74,5 +74,5 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   },
-  "homepage": "https://github.com/tuyennv38/nestjs-fcm#readme"
+  "homepage": "https://github.com/tuyennv38/fcm-nestjs#readme"
 }
