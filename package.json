@@ -1,6 +1,6 @@
 {
   "name": "cscmobi-fcm-nestjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NestJS npm package starter",
   "author": "Tuyen Nguyen <tuyennv@cscmobi.com>",
   "license": "MIT",

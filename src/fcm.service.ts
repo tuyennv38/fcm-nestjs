@@ -1,13 +1,11 @@
 import { Injectable } from '@nestjs/common/decorators/core/injectable.decorator';
-import { Inject, Logger } from '@nestjs/common';
 import * as firebaseAdmin from 'firebase-admin';
-import { FcmOptions, FCM_OPTIONS } from './fcm.options';
+import { FcmOptions } from './fcm.options';
 
 @Injectable()
 export class FcmService {
     constructor(
-        @Inject(FCM_OPTIONS) private fcmOptionsProvider: FcmOptions,
-        private readonly logger: Logger,
+        private fcmOptionsProvider: FcmOptions,
     ) {
         if (firebaseAdmin.apps.length === 0) {
             firebaseAdmin.initializeApp({
@@ -48,7 +46,6 @@ export class FcmService {
                     silent ? this.optionsSilent : this.options,
                 );
         } catch (error) {
-            this.logger.error(error.message, error.stackTrace, 'fcm-nestjs');
             throw error;
         }
         return result;
@@ -80,7 +77,6 @@ export class FcmService {
                     silent ? this.optionsSilent : this.options,
                 );
         } catch (error) {
-            this.logger.error(error.message, error.stackTrace, 'fcm-nestjs');
             throw error;
         }
         return result;
